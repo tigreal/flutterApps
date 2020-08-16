@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(30.0),
               color: Colors.deepOrangeAccent,
-              child: Text('1'),
+              child: Text('UNO'),
             ),
           ),
           Expanded(
