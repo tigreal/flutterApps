@@ -21,6 +21,16 @@ class NinjaCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/CHUNLI.webp'),
+                radius: 40.0,
+              ),
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[200],
+            ),
             Text(
               'Name',
               style: TextStyle(color: Colors.grey[400], fontSize: 20.0),
@@ -41,6 +51,25 @@ class NinjaCard extends StatelessWidget {
               height: 10.0,
             ),
             Text('8', style: TextStyle(color: Colors.amber, fontSize: 25.0)),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  'Ninja-Chunli@gmail.com',
+                  style: TextStyle(
+                      color: Colors.grey[400],
+                      fontSize: 18.0,
+                      letterSpacing: 1.0),
+                )
+              ],
+            ),
           ],
         ),
       ),

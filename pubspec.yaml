@@ -44,6 +44,7 @@ flutter:
   assets:
    - assets/clarence1.jpg
    - assets/clarence2.jpg
+   - assets/CHUNLI.webp
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
