@@ -25,17 +25,22 @@ class NinjaCard extends StatelessWidget {
               'Name',
               style: TextStyle(color: Colors.grey[400], fontSize: 20.0),
             ),
-            SizedBox(height: 10.0,),
+            SizedBox(
+              height: 10.0,
+            ),
             Text('CHun-Li',
                 style: TextStyle(color: Colors.amber, fontSize: 25.0)),
-            SizedBox(height: 30.0,),
+            SizedBox(
+              height: 30.0,
+            ),
             Text(
               'CURRENT NINJA LEVEL',
               style: TextStyle(color: Colors.grey[400], fontSize: 20.0),
             ),
-            SizedBox(height: 10.0,),
-            Text('8',
-                style: TextStyle(color: Colors.amber, fontSize: 25.0)),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text('8', style: TextStyle(color: Colors.amber, fontSize: 25.0)),
           ],
         ),
       ),
