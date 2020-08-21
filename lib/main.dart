@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'quote.dart';
 void main() => runApp(MaterialApp(
       home: QuoteList(),
     ));
@@ -16,6 +16,8 @@ class _QuoteListState extends State<QuoteList> {
     'y mi correo es fosmaralvarez@gmail.com'
   ];
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +28,7 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: qotes.map((qotes) => Text(qotes)).toList(),
+        children: qotes.map((qote) => Text(qote)).toList(),
       ),
     );
   }
