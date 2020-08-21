@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+
 void main() => runApp(MaterialApp(
       home: QuoteList(),
     ));
@@ -11,12 +12,35 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
   List<Quote> qotes = [
-    Quote(author: 'osmar wilde',text: 'lorem ipsum de ejemplo'),
-  Quote(author: 'osmar wilde',text: 'lorem ipsum de ejemplo'),
-  Quote(author: 'osmar wilde',text: 'lorem ipsum de ejemplo'),
+    Quote(author: 'osmar wilde', text: 'lorem ipsum de ejemplo'),
+    Quote(author: 'osmar wilde', text: 'lorem ipsum de '),
+    Quote(author: 'osmar wilde', text: 'lorem ipsum de ejemplo santos protones'),
   ];
 
-
+  Widget quoteTemplate(quote) {
+    return Card(margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              quote.text,
+              style: TextStyle(
+                  color: Colors.grey[600], fontSize: 15.0, letterSpacing: 1.0),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              quote.author,
+              style: TextStyle(
+                  color: Colors.grey[800], fontSize: 10.0, letterSpacing: 1.0),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +51,7 @@ class _QuoteListState extends State<QuoteList> {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      body: Column(
-        children: qotes.map((qote) => Text('${qote.text}-${qote.author}')).toList()
-      ),
+      body: Column(children: qotes.map((qote) => quoteTemplate(qote)).toList()),
     );
   }
 }
