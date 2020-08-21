@@ -12,7 +12,7 @@ class QuoteList extends StatefulWidget {
 class _QuoteListState extends State<QuoteList> {
   List<String> qotes = [
     'mi nombre es',
-    'osmar alvarez',
+    'osmar alvarezz',
     'y mi correo es fosmaralvarez@gmail.com'
   ];
 
