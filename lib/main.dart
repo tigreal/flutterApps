@@ -1,94 +1,32 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-      home: NinjaCard(),
+      home: QuoteList(),
     ));
 
-class NinjaCard extends StatefulWidget {
+class QuoteList extends StatefulWidget {
   @override
-  _NinjaCardState createState() => _NinjaCardState();
+  _QuoteListState createState() => _QuoteListState();
 }
 
-class _NinjaCardState extends State<NinjaCard> {
-  int ninjaLevel = 0;
+class _QuoteListState extends State<QuoteList> {
+  List<String> qotes = [
+    'mi nombre es',
+    'osmar alvarez',
+    'y mi correo es fosmaralvarez@gmail.com'
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[850],
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: Text(
-          'Ninja ID Card',
-        ),
+        title: Text('Awasome Quotes'),
         centerTitle: true,
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.redAccent,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            ninjaLevel += 1;
-          });
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.grey[800],
-      ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(40.0, 30.0, 40.0, 10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: CircleAvatar(
-                backgroundImage: AssetImage('assets/CHUNLI.webp'),
-                radius: 40.0,
-              ),
-            ),
-            Divider(
-              height: 60.0,
-              color: Colors.grey[200],
-            ),
-            Text(
-              'Name',
-              style: TextStyle(color: Colors.grey[400], fontSize: 20.0),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text('CHun-Li',
-                style: TextStyle(color: Colors.amber, fontSize: 25.0)),
-            SizedBox(
-              height: 30.0,
-            ),
-            Text(
-              'CURRENT NINJA LEVEL',
-              style: TextStyle(color: Colors.grey[400], fontSize: 20.0),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text('$ninjaLevel',
-                style: TextStyle(color: Colors.amber, fontSize: 25.0)),
-            SizedBox(
-              height: 10.0,
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.email,
-                  color: Colors.grey[400],
-                ),
-                SizedBox(width: 10.0),
-                Text(
-                  'Ninja-Chunli@gmail.com',
-                  style: TextStyle(
-                      color: Colors.grey[400],
-                      fontSize: 18.0,
-                      letterSpacing: 1.0),
-                )
-              ],
-            ),
-          ],
-        ),
+      body: Column(
+        children: qotes.map((qotes) => Text(qotes)).toList(),
       ),
     );
   }
