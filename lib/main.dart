@@ -10,10 +10,10 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
-  List<String> qotes = [
-    'mi nombre es',
-    'osmar alvarezz',
-    'y mi correo es fosmaralvarez@gmail.com'
+  List<Quote> qotes = [
+    Quote(author: 'osmar wilde',text: 'lorem ipsum de ejemplo'),
+  Quote(author: 'osmar wilde',text: 'lorem ipsum de ejemplo'),
+  Quote(author: 'osmar wilde',text: 'lorem ipsum de ejemplo'),
   ];
 
 
@@ -28,7 +28,7 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: qotes.map((qote) => Text(qote)).toList(),
+        children: qotes.map((qote) => Text('${qote.text}-${qote.author}')).toList()
       ),
     );
   }
